@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Property Details Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+   body {
+  font-family: sans-serif;
+  margin: 20px;
+  
+  
+
+h1 {
+  text-align: center;
+  color: white;
+}
+form{
+   display: block;
+   
+   text-align: center;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  
+}
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 750px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 250px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+}
+}
+</style>
+<body>
+  <h1>Enter your inputs</h1>
+  <form id="property-form">
+    <div class="form-group">
+      <label for="bedrooms">Property Type</label>
+      <input type="number" id="bedrooms" name="bedrooms" min="0" required>
+    </div>
+    <div class="form-group">
+      <label for="bedrooms">Sector<label>
+      <input type="text" id="bedrooms" placeholder="Dwarka Expressway" name="bedrooms" >
+    </div>
+    <div class="form-group">
+      <label for="bedrooms">Number of Bedrooms:</label>
+      <input type="number" id="bedrooms" name="bedrooms" min="0" required>
+    </div>
+    <div class="form-group">
+      <label for="bathrooms">Number of Bathrooms:</label>
+      <input type="number" id="bathrooms" name="bathrooms" min="0" required>
+    </div>
+    <div class="form-group">
+      <label for="balconies">Balconies:</label>
+      <input type="number" id="balconies" name="balconies" min="0" required>
+    </div>
+    <div class="form-group">
+      <label for="property-age">Property Age (in Years):</label>
+      <input type="number" id="property-age" name="property-age" min="0" required>
+    </div>
+    <div class="form-group">
+      <label for="area">Built-up Area (sq.ft.):</label>
+      <input type="number" id="area" name="area" min="0" required>
+    </div>
+    <div class="form-group">
+      <label for="servant-room">Servant Room:</label>
+      <input type="checkbox" id="servant-room" name="servant-room"> Yes
+    </div>
+    <div class="form-group">
+      <label for="store-room">Store Room:</label>
+      <input type="checkbox" id="store-room" name="store-room"> Yes
+    </div>
+    <div class="form-group">
+      <label for="furnishing">Furnishing Type:</label>
+      <select id="furnishing" name="furnishing">
+        <option value="">Select</option>
+        <option value="unfurnished">Unfurnished</option>
+        <option value="semi-furnished">Semi-Furnished</option>
+        <option value="fully-furnished">Fully Furnished</option>
+      </select>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  <script>
+  const propertyForm = document.getElementById('property-form');
+
+propertyForm.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  const formData = new FormData(propertyForm);
+  const bedrooms = formData.get('bedrooms');
+  const bathrooms = formData.get('bathrooms');
+  const balconies = formData.get('balconies');
+  const propertyAge = formData.get('property-age');
+  const area = formData.get('area');
+  const servantRoom = formData.get('servant-room');
+  const storeRoom = formData.get('store-room');
+  const furnishing = formData.get})
+  </script>
+</body>
+</html>
